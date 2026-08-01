@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "X One-Click Unfollow",
+  "version": "1.0",
+  "description": "Bypasses the unfollow confirmation modal on X (Twitter).",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*", "https://x.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
